@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_custom_directions",
+  "info": {
+    "name": "direction",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "no_int": {
+      "type": "integer"
+    },
+    "calle": {
+      "type": "string"
+    },
+    "no_ext": {
+      "type": "integer"
+    },
+    "referencia": {
+      "type": "text"
+    },
+    "municipio": {
+      "type": "string"
+    },
+    "estado": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "lan": {
+      "type": "float"
+    }
+  }
+}

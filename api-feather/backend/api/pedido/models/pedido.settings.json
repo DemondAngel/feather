@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "name": "Pedido",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_rastreo": {
+      "type": "string"
+    },
+    "tienda": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.direction"
+    },
+    "direccionEntrega": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.direction"
+    },
+    "costoEnvio": {
+      "type": "float"
+    },
+    "cliente": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pedidos"
+    }
+  }
+}

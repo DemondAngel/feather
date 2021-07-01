@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "name": "Store"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "alias": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.direction"
+    },
+    "products": {
+      "collection": "product"
+    },
+    "encargado": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "store"
+    }
+  }
+}
