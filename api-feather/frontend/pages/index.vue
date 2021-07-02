@@ -1,27 +1,9 @@
 <template>
-<Products :products="products" :error="error" :storeUrl="storeUrl" />
+  <div class="container my-md-5">
+    <button class="btn btn-primary">Mirame</button>
+  </div>
 </template>
 
 <script>
-import Products from "~/components/Products.vue"
-
-export default {
-  data() {
-    return {
-      products: [],
-      storeUrl: process.env.storeUrl,
-      error: null
-    }
-  },
-  async mounted() {
-    try {
-      this.products = await this.$strapi.$products.find()
-    } catch (error) {
-      this.error = error
-    }
-  },
-  components: {
-    Products
-  }
-}
+export default {}
 </script>
