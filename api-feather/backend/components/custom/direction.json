@@ -1,8 +1,9 @@
 {
   "collectionName": "components_custom_directions",
   "info": {
-    "name": "direction",
-    "icon": "ad"
+    "name": "direccion",
+    "icon": "ad",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -29,6 +30,9 @@
     },
     "lan": {
       "type": "float"
+    },
+    "colonia": {
+      "type": "string"
     }
   }
 }

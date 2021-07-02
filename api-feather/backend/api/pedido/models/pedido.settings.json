@@ -32,6 +32,11 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "pedidos"
+    },
+    "producto_pedido": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.producto-pedido"
     }
   }
 }

@@ -77,13 +77,13 @@
       "via": "encargado",
       "model": "store"
     },
-    "products": {
-      "via": "productors",
-      "model": "product"
-    },
     "pedidos": {
       "via": "cliente",
       "collection": "pedido"
+    },
+    "products": {
+      "via": "productores",
+      "model": "product"
     }
   }
 }

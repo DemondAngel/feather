@@ -1,24 +1,17 @@
 {
-  "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "components_custom_producto_pedidos",
   "info": {
-    "name": "producto",
+    "name": "producto_pedido",
+    "icon": "align-left",
     "description": ""
   },
-  "options": {
-    "increments": true,
-    "timestamps": true,
-    "draftAndPublish": false
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
     "nombre": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "descripcion": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "precio": {
       "type": "float"
@@ -27,20 +20,16 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "files",
         "images",
+        "files",
         "videos"
       ],
       "plugin": "upload",
-      "required": true,
+      "required": false,
       "pluginOptions": {}
     },
-    "slug": {
-      "type": "uid"
-    },
     "categorias": {
-      "collection": "category",
-      "via": "productos"
+      "collection": "category"
     },
     "Custom_field": {
       "type": "component",
@@ -52,24 +41,20 @@
       "enum": [
         "draft",
         "published"
-      ],
-      "default": "published",
-      "required": true
+      ]
     },
     "precioVenta": {
-      "type": "decimal"
+      "type": "float"
     },
     "cantidad": {
       "type": "integer"
     },
     "productores": {
       "plugin": "users-permissions",
-      "collection": "user",
-      "via": "products"
+      "collection": "user"
     },
-    "tiendas": {
-      "via": "productos",
-      "collection": "store"
+    "tienda": {
+      "model": "store"
     }
   }
 }

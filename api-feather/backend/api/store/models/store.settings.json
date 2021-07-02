@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "stores",
   "info": {
-    "name": "Store"
+    "name": "Tienda",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,8 +20,10 @@
       "repeatable": false,
       "component": "custom.direction"
     },
-    "products": {
-      "collection": "product"
+    "productos": {
+      "via": "tiendas",
+      "collection": "product",
+      "dominant": true
     },
     "encargado": {
       "plugin": "users-permissions",

@@ -2,12 +2,15 @@
   "kind": "collectionType",
   "collectionName": "categories",
   "info": {
-    "name": "category"
+    "name": "categoria",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string"
@@ -16,8 +19,8 @@
       "type": "uid",
       "targetField": "name"
     },
-    "products": {
-      "via": "categories",
+    "productos": {
+      "via": "categorias",
       "collection": "product",
       "dominant": true
     }

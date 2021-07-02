@@ -1,8 +1,9 @@
 {
   "collectionName": "components_custom_phones",
   "info": {
-    "name": "phone",
-    "icon": "address-book"
+    "name": "telefono",
+    "icon": "address-book",
+    "description": ""
   },
   "options": {},
   "attributes": {
