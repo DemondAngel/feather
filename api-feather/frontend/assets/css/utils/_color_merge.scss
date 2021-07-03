@@ -1,0 +1,13 @@
+// Create your own map
+$custom-colors: (
+  'comp1': rgb(185, 189, 143),
+  'comp2': rgb(251, 175, 28),
+  'comp3': rgb(189, 154, 95),
+  'grey': rgb(99, 101, 105),
+  'dark': rgb(50, 62, 72),
+  'comp4': rgb(245, 130, 32),
+  'comp5': rgb(243, 111, 79),
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);

@@ -1,0 +1,11 @@
+mutation ($password: String!, $identifier: String!) {
+  login(input: { password: $password, identifier: $identifier }) {
+    jwt
+    user {
+      username
+      role {
+        name
+      }
+    }
+  }
+}
