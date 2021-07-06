@@ -5,50 +5,49 @@ import 'package:flutter/services.dart';
 
 ThemeData customTheme(){
 
-  const colorGreen = Color(0xFF29A35C);
-  const colorWhite = Color(0xFFF7F7F7);
-  const fontFamily = 'Raleway';
+  const primaryColor = Color(0xFFD0973C);
+  const accentColor = Color(0xFFFCAF1A);
+  const fontFamily = 'Heading primary Poppins 50 SemiBold';
 
   return ThemeData(
     brightness: Brightness.light,
-    backgroundColor: colorGreen,
+    backgroundColor: primaryColor,
     fontFamily: fontFamily,
-    primaryColor: colorGreen,
-    accentColor: colorWhite,
+    primaryColor: primaryColor,
+    accentColor: accentColor,
     appBarTheme: AppBarTheme(
-      backgroundColor: colorGreen,
-      foregroundColor: colorWhite,
+      backgroundColor: primaryColor,
+      foregroundColor: accentColor,
       brightness: Brightness.light,
       elevation: 3,
     ),
     inputDecorationTheme: InputDecorationTheme(
-      floatingLabelBehavior: FloatingLabelBehavior.never,
-      border: OutlineInputBorder(
+      floatingLabelBehavior: FloatingLabelBehavior.auto,
+      border: UnderlineInputBorder(
         borderSide: BorderSide(
-          width: 1,
-          color: Color(0xFF808080)
-        ),
-        borderRadius: BorderRadius.circular(8),
+          color: Colors.black,
+          width: 1
+        )
       ),
-      contentPadding: EdgeInsets.fromLTRB(15, 14, 15, 14),
-      alignLabelWithHint: true,
-      hintStyle: TextStyle(
-        fontWeight: FontWeight.w400,
-        fontFamily: fontFamily,
-        color: Color(0xFF808080),
-        fontSize: 15,
+      enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+              color: Colors.black,
+              width: 1
+          )
       ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8),
-        borderSide: BorderSide(
-            width: 1,
-            color: Color(0xFFE5E5E5)
-        ),
+      focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+              color: Colors.black,
+              width: 2
+          )
+      ),
+      labelStyle: TextStyle(
+        color:Colors.black,
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(colorWhite),
+        backgroundColor: MaterialStateProperty.all<Color>(accentColor),
         elevation: MaterialStateProperty.all<double>(0),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
         textStyle: MaterialStateProperty.all<TextStyle>(
@@ -74,62 +73,62 @@ ThemeData customTheme(){
     ),
     //cardColor: materialColorBlack[100],
     iconTheme: IconThemeData(
-      color: colorWhite
+      color: accentColor
     ),
     textTheme: TextTheme(
       headline6: TextStyle( //Este es para appBar 
         fontFamily: fontFamily,
         fontWeight: FontWeight.w400,
-        color: colorWhite,
+        color: Colors.white
       ),
       headline5: TextStyle(
         fontFamily: fontFamily,
         fontWeight: FontWeight.w700,
-        color: colorWhite,
+        color: accentColor,
         fontSize: 24,
       ),
       subtitle2: TextStyle(
         fontFamily: fontFamily,
         fontWeight: FontWeight.w400,
-        color: colorWhite,
+        color: accentColor,
         fontSize: 20
       ),
       bodyText1: TextStyle(
         fontFamily: fontFamily,
         fontWeight: FontWeight.w400,
-        color: colorWhite,
+        color: accentColor,
         fontSize: 17
       ),
       bodyText2: TextStyle(
         fontFamily: fontFamily,
         fontWeight: FontWeight.w400,
-        color: colorWhite,
+        color: Colors.black,
         fontSize: 15
       ),
     ),
     radioTheme: RadioThemeData(
-        fillColor: MaterialStateProperty.all<Color>(colorWhite)
+        fillColor: MaterialStateProperty.all<Color>(accentColor)
     ),
     checkboxTheme: CheckboxThemeData(
-      checkColor: MaterialStateProperty.all<Color>(colorGreen),
+      checkColor: MaterialStateProperty.all<Color>(primaryColor),
 
     ),
     dialogTheme: DialogTheme(
-      backgroundColor: colorGreen,
+      backgroundColor: primaryColor,
       titleTextStyle: TextStyle(
         fontFamily: fontFamily,
         fontWeight: FontWeight.w700,
-        color: colorWhite,
+        color: accentColor,
         fontSize: 24,
       ),
       contentTextStyle: TextStyle(
           fontFamily: fontFamily,
           fontWeight: FontWeight.w400,
-          color: colorWhite,
+          color: accentColor,
           fontSize: 17
       ),
     ),
-    indicatorColor: colorWhite
+    indicatorColor: accentColor
   );
 }
 

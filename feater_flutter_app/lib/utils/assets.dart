@@ -1,4 +1,5 @@
 const backButtonIcon = "assets/images/vectors/back_button.svg";
+const logo = 'assets/images/logos/logo.png';
 const facebookIcon = "assets/images/vectors/facebook.svg";
 const googleIcons = "assets/images/vectors/google.svg";
 const background = "assets/images/decoration/background.png"; //Delete this asset and change SvgPicture to NetworkImage
