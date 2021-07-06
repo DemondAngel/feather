@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "categories",
   "info": {
-    "name": "categoria",
+    "name": "subcategoria",
     "description": ""
   },
   "options": {
@@ -20,7 +20,7 @@
       "targetField": "name"
     },
     "productos": {
-      "via": "categorias",
+      "via": "subcategorias",
       "collection": "product",
       "dominant": true
     }

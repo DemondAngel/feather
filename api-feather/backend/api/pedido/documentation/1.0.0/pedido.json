@@ -525,7 +525,7 @@
           "id_rastreo": {
             "type": "string"
           },
-          "tienda": {
+          "distribuidor": {
             "type": "object",
             "required": [
               "id"
@@ -656,7 +656,7 @@
                   "type": "string"
                 }
               },
-              "store": {
+              "distribuidora": {
                 "type": "string"
               },
               "pedidos": {
@@ -673,6 +673,9 @@
               },
               "company": {
                 "type": "string"
+              },
+              "isMayorista": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -769,7 +772,7 @@
                     }
                   }
                 },
-                "categorias": {
+                "subcategorias": {
                   "type": "array",
                   "items": {
                     "required": [
@@ -795,29 +798,6 @@
                         "type": "string"
                       },
                       "updated_by": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                },
-                "Custom_field": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "required": {
-                        "type": "boolean"
-                      },
-                      "options": {
                         "type": "string"
                       }
                     }
@@ -890,7 +870,7 @@
                           "type": "string"
                         }
                       },
-                      "store": {
+                      "distribuidora": {
                         "type": "string"
                       },
                       "pedidos": {
@@ -908,6 +888,9 @@
                       "company": {
                         "type": "string"
                       },
+                      "isMayorista": {
+                        "type": "boolean"
+                      },
                       "created_by": {
                         "type": "string"
                       },
@@ -917,7 +900,7 @@
                     }
                   }
                 },
-                "tienda": {
+                "distribuidor": {
                   "required": [
                     "id"
                   ],
@@ -950,6 +933,37 @@
                       "type": "string"
                     }
                   }
+                },
+                "categorias": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "nombre": {
+                        "type": "string"
+                      },
+                      "slug": {
+                        "type": "uid"
+                      },
+                      "producto": {
+                        "type": "string"
+                      },
+                      "published_at": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -965,7 +979,7 @@
           "id_rastreo": {
             "type": "string"
           },
-          "tienda": {
+          "distribuidor": {
             "type": "object",
             "required": [
               "id"
@@ -1134,7 +1148,7 @@
                     }
                   }
                 },
-                "categorias": {
+                "subcategorias": {
                   "type": "array",
                   "items": {
                     "required": [
@@ -1160,29 +1174,6 @@
                         "type": "string"
                       },
                       "updated_by": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                },
-                "Custom_field": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "required": {
-                        "type": "boolean"
-                      },
-                      "options": {
                         "type": "string"
                       }
                     }
@@ -1255,7 +1246,7 @@
                           "type": "string"
                         }
                       },
-                      "store": {
+                      "distribuidora": {
                         "type": "string"
                       },
                       "pedidos": {
@@ -1273,6 +1264,9 @@
                       "company": {
                         "type": "string"
                       },
+                      "isMayorista": {
+                        "type": "boolean"
+                      },
                       "created_by": {
                         "type": "string"
                       },
@@ -1282,7 +1276,7 @@
                     }
                   }
                 },
-                "tienda": {
+                "distribuidor": {
                   "required": [
                     "id"
                   ],
@@ -1313,6 +1307,37 @@
                     },
                     "updated_by": {
                       "type": "string"
+                    }
+                  }
+                },
+                "categorias": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "nombre": {
+                        "type": "string"
+                      },
+                      "slug": {
+                        "type": "uid"
+                      },
+                      "producto": {
+                        "type": "string"
+                      },
+                      "published_at": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
                     }
                   }
                 }

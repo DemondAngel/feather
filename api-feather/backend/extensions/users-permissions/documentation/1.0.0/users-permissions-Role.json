@@ -576,7 +576,7 @@
                     "type": "string"
                   }
                 },
-                "store": {
+                "distribuidora": {
                   "type": "string"
                 },
                 "pedidos": {
@@ -593,6 +593,9 @@
                 },
                 "company": {
                   "type": "string"
+                },
+                "isMayorista": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"

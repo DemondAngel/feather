@@ -1328,14 +1328,11 @@
                 "slug": {
                   "type": "uid"
                 },
-                "categorias": {
+                "subcategorias": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "Custom_field": {
-                  "type": "component"
                 },
                 "status": {
                   "type": "string",
@@ -1356,7 +1353,7 @@
                     "type": "string"
                   }
                 },
-                "tiendas": {
+                "distribuidores": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -1364,6 +1361,12 @@
                 },
                 "precioMayoreo": {
                   "type": "string"
+                },
+                "categorias": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -1374,7 +1377,7 @@
               }
             }
           },
-          "store": {
+          "distribuidora": {
             "required": [
               "id"
             ],
@@ -1421,7 +1424,7 @@
                 "id_rastreo": {
                   "type": "string"
                 },
-                "tienda": {
+                "distribuidor": {
                   "type": "component"
                 },
                 "direccionEntrega": {
@@ -1475,14 +1478,11 @@
               "slug": {
                 "type": "uid"
               },
-              "categorias": {
+              "subcategorias": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "Custom_field": {
-                "type": "component"
               },
               "status": {
                 "type": "string",
@@ -1503,7 +1503,7 @@
                   "type": "string"
                 }
               },
-              "tiendas": {
+              "distribuidores": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -1511,6 +1511,12 @@
               },
               "precioMayoreo": {
                 "type": "string"
+              },
+              "categorias": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"
@@ -1525,6 +1531,9 @@
           },
           "company": {
             "type": "string"
+          },
+          "isMayorista": {
+            "type": "boolean"
           }
         }
       },
@@ -1621,7 +1630,7 @@
               "type": "string"
             }
           },
-          "store": {
+          "distribuidora": {
             "type": "string"
           },
           "pedidos": {
@@ -1638,6 +1647,9 @@
           },
           "company": {
             "type": "string"
+          },
+          "isMayorista": {
+            "type": "boolean"
           },
           "created_by": {
             "type": "string"

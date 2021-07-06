@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "stores",
   "info": {
-    "name": "Tienda",
+    "name": "Distribuidora",
     "description": ""
   },
   "options": {
@@ -21,12 +21,12 @@
       "component": "custom.direction"
     },
     "productos": {
-      "via": "tiendas",
+      "via": "distribuidores",
       "collection": "product",
       "dominant": true
     },
     "encargado": {
-      "via": "store",
+      "via": "distribuidora",
       "plugin": "users-permissions",
       "model": "user"
     }

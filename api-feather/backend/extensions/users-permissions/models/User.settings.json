@@ -73,7 +73,7 @@
     "favoriteProducts": {
       "collection": "product"
     },
-    "store": {
+    "distribuidora": {
       "via": "encargado",
       "model": "store"
     },
@@ -90,6 +90,9 @@
     },
     "company": {
       "type": "string"
+    },
+    "isMayorista": {
+      "type": "boolean"
     }
   }
 }
