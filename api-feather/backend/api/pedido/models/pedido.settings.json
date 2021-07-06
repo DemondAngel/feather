@@ -29,9 +29,9 @@
       "type": "float"
     },
     "cliente": {
+      "via": "pedidos",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "pedidos"
+      "model": "user"
     },
     "producto_pedido": {
       "type": "component",

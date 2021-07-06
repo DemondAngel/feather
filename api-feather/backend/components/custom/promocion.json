@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_custom_promocions",
+  "info": {
+    "name": "Promocion",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "cantidadDescuento": {
+      "type": "integer"
+    },
+    "cantidadTotal": {
+      "type": "integer"
+    },
+    "precioDescuento": {
+      "type": "float"
+    }
+  }
+}

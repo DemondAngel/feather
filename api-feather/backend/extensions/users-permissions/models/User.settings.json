@@ -84,6 +84,12 @@
     "products": {
       "via": "productores",
       "model": "product"
+    },
+    "RFC": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
     }
   }
 }

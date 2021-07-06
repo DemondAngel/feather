@@ -63,13 +63,16 @@
       "type": "integer"
     },
     "productores": {
+      "via": "products",
       "plugin": "users-permissions",
-      "collection": "user",
-      "via": "products"
+      "collection": "user"
     },
     "tiendas": {
       "via": "productos",
       "collection": "store"
+    },
+    "precioMayoreo": {
+      "type": "string"
     }
   }
 }

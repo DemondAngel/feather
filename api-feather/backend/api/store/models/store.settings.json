@@ -26,9 +26,9 @@
       "dominant": true
     },
     "encargado": {
+      "via": "store",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "store"
+      "model": "user"
     }
   }
 }

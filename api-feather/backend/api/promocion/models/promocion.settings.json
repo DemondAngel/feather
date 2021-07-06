@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promocions",
+  "info": {
+    "name": "Promocion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cantidadDescuento": {
+      "type": "integer"
+    },
+    "cantidadTotal": {
+      "type": "integer"
+    },
+    "precioDescuento": {
+      "type": "float"
+    }
+  }
+}

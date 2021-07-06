@@ -741,6 +741,12 @@
                 "products": {
                   "type": "string"
                 },
+                "RFC": {
+                  "type": "string"
+                },
+                "company": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -786,6 +792,9 @@
                 }
               }
             }
+          },
+          "precioMayoreo": {
+            "type": "string"
           }
         }
       },
@@ -862,6 +871,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "precioMayoreo": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

@@ -668,6 +668,12 @@
               "products": {
                 "type": "string"
               },
+              "RFC": {
+                "type": "string"
+              },
+              "company": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -894,6 +900,12 @@
                         }
                       },
                       "products": {
+                        "type": "string"
+                      },
+                      "RFC": {
+                        "type": "string"
+                      },
+                      "company": {
                         "type": "string"
                       },
                       "created_by": {
@@ -1253,6 +1265,12 @@
                         }
                       },
                       "products": {
+                        "type": "string"
+                      },
+                      "RFC": {
+                        "type": "string"
+                      },
+                      "company": {
                         "type": "string"
                       },
                       "created_by": {

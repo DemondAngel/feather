@@ -1362,6 +1362,9 @@
                     "type": "string"
                   }
                 },
+                "precioMayoreo": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -1506,6 +1509,9 @@
                   "type": "string"
                 }
               },
+              "precioMayoreo": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -1513,6 +1519,12 @@
                 "type": "string"
               }
             }
+          },
+          "RFC": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
           }
         }
       },
@@ -1619,6 +1631,12 @@
             }
           },
           "products": {
+            "type": "string"
+          },
+          "RFC": {
+            "type": "string"
+          },
+          "company": {
             "type": "string"
           },
           "created_by": {
