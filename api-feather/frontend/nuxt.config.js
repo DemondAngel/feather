@@ -2,6 +2,10 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
+  router: {
+    linkActiveClass: 'active',
+  },
+
   server: {
     port: 3030, // default: 3000
   },
@@ -18,14 +22,25 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/vuelidate' }, { src: '~/plugins/bootstrap.js' }],
+  plugins: [
+    { src: '~/plugins/vuelidate' },
+    { src: '~/plugins/bootstrap.js' },
+    { src: '~/plugins/vue-tippy' },
+    { src: '~/plugins/vue-charts' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -64,7 +79,7 @@ export default {
   loading: {
     continuous: true,
     height: '5px',
-    color: 'var(--primary-color)',
+    color: 'red',
     throttle: 0,
   },
 }

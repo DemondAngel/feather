@@ -5,13 +5,266 @@ schema {
   mutation: Mutation
 }
 
-union Morph = Category | CategoryAggregator | CategoryConnection | CategoryConnectionCreatedAt | CategoryConnectionId | CategoryConnectionName | CategoryConnectionSlug | CategoryConnectionUpdatedAt | CategoryConnection_id | CategoryGroupBy | ComponentCustomCustomField | ComponentCustomDirection | ComponentCustomPhone | ComponentCustomProductoPedido | I18NLocale | Pedido | PedidoAggregator | PedidoAggregatorAvg | PedidoAggregatorMax | PedidoAggregatorMin | PedidoAggregatorSum | PedidoConnection | PedidoConnectionCliente | PedidoConnectionCostoEnvio | PedidoConnectionCreatedAt | PedidoConnectionDireccionEntrega | PedidoConnectionId | PedidoConnectionId_rastreo | PedidoConnectionPublished_at | PedidoConnectionTienda | PedidoConnectionUpdatedAt | PedidoConnection_id | PedidoGroupBy | Product | ProductAggregator | ProductAggregatorAvg | ProductAggregatorMax | ProductAggregatorMin | ProductAggregatorSum | ProductConnection | ProductConnectionCantidad | ProductConnectionCreatedAt | ProductConnectionDescripcion | ProductConnectionId | ProductConnectionImagen | ProductConnectionNombre | ProductConnectionPrecio | ProductConnectionPrecioVenta | ProductConnectionSlug | ProductConnectionStatus | ProductConnectionUpdatedAt | ProductConnection_id | ProductGroupBy | Store | StoreAggregator | StoreConnection | StoreConnectionAlias | StoreConnectionCreatedAt | StoreConnectionDireccion | StoreConnectionEncargado | StoreConnectionId | StoreConnectionPublished_at | StoreConnectionUpdatedAt | StoreConnection_id | StoreGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreatedAt | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdatedAt | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileConnection_id | UploadFileGroupBy | UserPermissionsPasswordPayload | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnection_id | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionBirthday | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionCreatedAt | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionProducts | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionStore | UsersPermissionsUserConnectionStoryLife | UsersPermissionsUserConnectionUpdatedAt | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnection_id | UsersPermissionsUserGroupBy | createCategoryPayload | createPedidoPayload | createProductPayload | createRolePayload | createStorePayload | createUserPayload | deleteCategoryPayload | deleteFilePayload | deletePedidoPayload | deleteProductPayload | deleteRolePayload | deleteStorePayload | deleteUserPayload | updateCategoryPayload | updatePedidoPayload | updateProductPayload | updateRolePayload | updateStorePayload | updateUserPayload
+union Morph =
+    Categoria
+  | CategoriaAggregator
+  | CategoriaConnection
+  | CategoriaConnectionCreatedAt
+  | CategoriaConnectionId
+  | CategoriaConnectionNombre
+  | CategoriaConnectionProducto
+  | CategoriaConnectionPublished_at
+  | CategoriaConnectionSlug
+  | CategoriaConnectionUpdatedAt
+  | CategoriaConnection_id
+  | CategoriaGroupBy
+  | Category
+  | CategoryAggregator
+  | CategoryConnection
+  | CategoryConnectionCreatedAt
+  | CategoryConnectionId
+  | CategoryConnectionName
+  | CategoryConnectionSlug
+  | CategoryConnectionUpdatedAt
+  | CategoryConnection_id
+  | CategoryGroupBy
+  | ComponentCustomDirection
+  | ComponentCustomPhone
+  | ComponentCustomProductoPedido
+  | ComponentCustomPromocion
+  | I18NLocale
+  | Pedido
+  | PedidoAggregator
+  | PedidoAggregatorAvg
+  | PedidoAggregatorMax
+  | PedidoAggregatorMin
+  | PedidoAggregatorSum
+  | PedidoConnection
+  | PedidoConnectionCliente
+  | PedidoConnectionCostoEnvio
+  | PedidoConnectionCreatedAt
+  | PedidoConnectionDireccionEntrega
+  | PedidoConnectionDistribuidor
+  | PedidoConnectionId
+  | PedidoConnectionId_rastreo
+  | PedidoConnectionPublished_at
+  | PedidoConnectionUpdatedAt
+  | PedidoConnection_id
+  | PedidoGroupBy
+  | Product
+  | ProductAggregator
+  | ProductAggregatorAvg
+  | ProductAggregatorMax
+  | ProductAggregatorMin
+  | ProductAggregatorSum
+  | ProductConnection
+  | ProductConnectionCantidad
+  | ProductConnectionCreatedAt
+  | ProductConnectionDescripcion
+  | ProductConnectionId
+  | ProductConnectionImagen
+  | ProductConnectionNombre
+  | ProductConnectionPrecio
+  | ProductConnectionPrecioMayoreo
+  | ProductConnectionPrecioVenta
+  | ProductConnectionSlug
+  | ProductConnectionStatus
+  | ProductConnectionUpdatedAt
+  | ProductConnection_id
+  | ProductGroupBy
+  | Promocion
+  | PromocionAggregator
+  | PromocionAggregatorAvg
+  | PromocionAggregatorMax
+  | PromocionAggregatorMin
+  | PromocionAggregatorSum
+  | PromocionConnection
+  | PromocionConnectionCantidadDescuento
+  | PromocionConnectionCantidadTotal
+  | PromocionConnectionCreatedAt
+  | PromocionConnectionId
+  | PromocionConnectionPrecioDescuento
+  | PromocionConnectionPublished_at
+  | PromocionConnectionUpdatedAt
+  | PromocionConnection_id
+  | PromocionGroupBy
+  | Store
+  | StoreAggregator
+  | StoreConnection
+  | StoreConnectionAlias
+  | StoreConnectionCreatedAt
+  | StoreConnectionDireccion
+  | StoreConnectionEncargado
+  | StoreConnectionId
+  | StoreConnectionPublished_at
+  | StoreConnectionUpdatedAt
+  | StoreConnection_id
+  | StoreGroupBy
+  | UploadFile
+  | UploadFileAggregator
+  | UploadFileAggregatorAvg
+  | UploadFileAggregatorMax
+  | UploadFileAggregatorMin
+  | UploadFileAggregatorSum
+  | UploadFileConnection
+  | UploadFileConnectionAlternativeText
+  | UploadFileConnectionCaption
+  | UploadFileConnectionCreatedAt
+  | UploadFileConnectionExt
+  | UploadFileConnectionFormats
+  | UploadFileConnectionHash
+  | UploadFileConnectionHeight
+  | UploadFileConnectionId
+  | UploadFileConnectionMime
+  | UploadFileConnectionName
+  | UploadFileConnectionPreviewUrl
+  | UploadFileConnectionProvider
+  | UploadFileConnectionProvider_metadata
+  | UploadFileConnectionSize
+  | UploadFileConnectionUpdatedAt
+  | UploadFileConnectionUrl
+  | UploadFileConnectionWidth
+  | UploadFileConnection_id
+  | UploadFileGroupBy
+  | UserPermissionsPasswordPayload
+  | UsersPermissionsLoginPayload
+  | UsersPermissionsMe
+  | UsersPermissionsMeRole
+  | UsersPermissionsPermission
+  | UsersPermissionsRole
+  | UsersPermissionsRoleAggregator
+  | UsersPermissionsRoleConnection
+  | UsersPermissionsRoleConnectionDescription
+  | UsersPermissionsRoleConnectionId
+  | UsersPermissionsRoleConnectionName
+  | UsersPermissionsRoleConnectionType
+  | UsersPermissionsRoleConnection_id
+  | UsersPermissionsRoleGroupBy
+  | UsersPermissionsUser
+  | UsersPermissionsUserAggregator
+  | UsersPermissionsUserConnection
+  | UsersPermissionsUserConnectionBirthday
+  | UsersPermissionsUserConnectionBlocked
+  | UsersPermissionsUserConnectionCompany
+  | UsersPermissionsUserConnectionConfirmed
+  | UsersPermissionsUserConnectionCreatedAt
+  | UsersPermissionsUserConnectionDistribuidora
+  | UsersPermissionsUserConnectionEmail
+  | UsersPermissionsUserConnectionId
+  | UsersPermissionsUserConnectionIsMayorista
+  | UsersPermissionsUserConnectionProducts
+  | UsersPermissionsUserConnectionProvider
+  | UsersPermissionsUserConnectionRFC
+  | UsersPermissionsUserConnectionRole
+  | UsersPermissionsUserConnectionStoryLife
+  | UsersPermissionsUserConnectionUpdatedAt
+  | UsersPermissionsUserConnectionUsername
+  | UsersPermissionsUserConnection_id
+  | UsersPermissionsUserGroupBy
+  | createCategoriaPayload
+  | createCategoryPayload
+  | createPedidoPayload
+  | createProductPayload
+  | createPromocionPayload
+  | createRolePayload
+  | createStorePayload
+  | createUserPayload
+  | deleteCategoriaPayload
+  | deleteCategoryPayload
+  | deleteFilePayload
+  | deletePedidoPayload
+  | deleteProductPayload
+  | deletePromocionPayload
+  | deleteRolePayload
+  | deleteStorePayload
+  | deleteUserPayload
+  | updateCategoriaPayload
+  | updateCategoryPayload
+  | updatePedidoPayload
+  | updateProductPayload
+  | updatePromocionPayload
+  | updateRolePayload
+  | updateStorePayload
+  | updateUserPayload
 
 type AdminUser {
   firstname: String!
   id: ID!
   lastname: String!
   username: String
+}
+
+type Categoria {
+  _id: ID!
+  createdAt: DateTime!
+  id: ID!
+  nombre: String
+  producto: Product
+  published_at: DateTime
+  slug: String
+  updatedAt: DateTime!
+}
+
+type CategoriaAggregator {
+  count: Int
+  totalCount: Int
+}
+
+type CategoriaConnection {
+  aggregate: CategoriaAggregator
+  groupBy: CategoriaGroupBy
+  values: [Categoria]
+}
+
+type CategoriaConnectionCreatedAt {
+  connection: CategoriaConnection
+  key: DateTime
+}
+
+type CategoriaConnectionId {
+  connection: CategoriaConnection
+  key: ID
+}
+
+type CategoriaConnectionNombre {
+  connection: CategoriaConnection
+  key: String
+}
+
+type CategoriaConnectionProducto {
+  connection: CategoriaConnection
+  key: ID
+}
+
+type CategoriaConnectionPublished_at {
+  connection: CategoriaConnection
+  key: DateTime
+}
+
+type CategoriaConnectionSlug {
+  connection: CategoriaConnection
+  key: String
+}
+
+type CategoriaConnectionUpdatedAt {
+  connection: CategoriaConnection
+  key: DateTime
+}
+
+type CategoriaConnection_id {
+  connection: CategoriaConnection
+  key: ID
+}
+
+type CategoriaGroupBy {
+  _id: [CategoriaConnection_id]
+  createdAt: [CategoriaConnectionCreatedAt]
+  id: [CategoriaConnectionId]
+  nombre: [CategoriaConnectionNombre]
+  producto: [CategoriaConnectionProducto]
+  published_at: [CategoriaConnectionPublished_at]
+  slug: [CategoriaConnectionSlug]
+  updatedAt: [CategoriaConnectionUpdatedAt]
 }
 
 type Category {
@@ -74,16 +327,9 @@ type CategoryGroupBy {
   updatedAt: [CategoryConnectionUpdatedAt]
 }
 
-type ComponentCustomCustomField {
-  _id: ID!
-  id: ID!
-  options: String
-  required: Boolean
-  title: String
-}
-
 type ComponentCustomDirection {
   _id: ID!
+  alias: String
   calle: String
   colonia: String
   estado: String
@@ -104,11 +350,11 @@ type ComponentCustomPhone {
 }
 
 type ComponentCustomProductoPedido {
-  Custom_field: [ComponentCustomCustomField]
   _id: ID!
   cantidad: Int
-  categorias(limit: Int, sort: String, start: Int, where: JSON): [Category]
+  categorias(limit: Int, sort: String, start: Int, where: JSON): [Categoria]
   descripcion: String
+  distribuidor: Store
   id: ID!
   imagen: UploadFile
   nombre: String
@@ -116,7 +362,15 @@ type ComponentCustomProductoPedido {
   precioVenta: Float
   productores(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
   status: ENUM_COMPONENTCUSTOMPRODUCTOPEDIDO_STATUS
-  tienda: Store
+  subcategorias(limit: Int, sort: String, start: Int, where: JSON): [Category]
+}
+
+type ComponentCustomPromocion {
+  _id: ID!
+  cantidadDescuento: Int
+  cantidadTotal: Int
+  id: ID!
+  precioDescuento: Float
 }
 
 type I18NLocale {
@@ -129,19 +383,23 @@ type I18NLocale {
 }
 
 type Mutation {
+  createCategoria(input: createCategoriaInput): createCategoriaPayload
   createCategory(input: createCategoryInput): createCategoryPayload
   createPedido(input: createPedidoInput): createPedidoPayload
   createProduct(input: createProductInput): createProductPayload
+  createPromocion(input: createPromocionInput): createPromocionPayload
   "Create a new role"
   createRole(input: createRoleInput): createRolePayload
   createStore(input: createStoreInput): createStorePayload
   "Create a new user"
   createUser(input: createUserInput): createUserPayload
+  deleteCategoria(input: deleteCategoriaInput): deleteCategoriaPayload
   deleteCategory(input: deleteCategoryInput): deleteCategoryPayload
   "Delete one file"
   deleteFile(input: deleteFileInput): deleteFilePayload
   deletePedido(input: deletePedidoInput): deletePedidoPayload
   deleteProduct(input: deleteProductInput): deleteProductPayload
+  deletePromocion(input: deletePromocionInput): deletePromocionPayload
   "Delete an existing role"
   deleteRole(input: deleteRoleInput): deleteRolePayload
   deleteStore(input: deleteStoreInput): deleteStorePayload
@@ -150,19 +408,38 @@ type Mutation {
   emailConfirmation(confirmation: String!): UsersPermissionsLoginPayload
   forgotPassword(email: String!): UserPermissionsPasswordPayload
   login(input: UsersPermissionsLoginInput!): UsersPermissionsLoginPayload!
-  multipleUpload(field: String, files: [Upload]!, ref: String, refId: ID, source: String): [UploadFile]!
+  multipleUpload(
+    field: String
+    files: [Upload]!
+    ref: String
+    refId: ID
+    source: String
+  ): [UploadFile]!
   register(input: UsersPermissionsRegisterInput!): UsersPermissionsLoginPayload!
-  resetPassword(code: String!, password: String!, passwordConfirmation: String!): UsersPermissionsLoginPayload
+  resetPassword(
+    code: String!
+    password: String!
+    passwordConfirmation: String!
+  ): UsersPermissionsLoginPayload
+  updateCategoria(input: updateCategoriaInput): updateCategoriaPayload
   updateCategory(input: updateCategoryInput): updateCategoryPayload
   updateFileInfo(id: ID!, info: FileInfoInput!): UploadFile!
   updatePedido(input: updatePedidoInput): updatePedidoPayload
   updateProduct(input: updateProductInput): updateProductPayload
+  updatePromocion(input: updatePromocionInput): updatePromocionPayload
   "Update an existing role"
   updateRole(input: updateRoleInput): updateRolePayload
   updateStore(input: updateStoreInput): updateStorePayload
   "Update an existing user"
   updateUser(input: updateUserInput): updateUserPayload
-  upload(field: String, file: Upload!, info: FileInfoInput, ref: String, refId: ID, source: String): UploadFile!
+  upload(
+    field: String
+    file: Upload!
+    info: FileInfoInput
+    ref: String
+    refId: ID
+    source: String
+  ): UploadFile!
 }
 
 type Pedido {
@@ -171,11 +448,11 @@ type Pedido {
   costoEnvio: Float
   createdAt: DateTime!
   direccionEntrega: ComponentCustomDirection
+  distribuidor: ComponentCustomDirection
   id: ID!
   id_rastreo: String
   producto_pedido: [ComponentCustomProductoPedido]
   published_at: DateTime
-  tienda: ComponentCustomDirection
   updatedAt: DateTime!
 }
 
@@ -230,6 +507,11 @@ type PedidoConnectionDireccionEntrega {
   key: ID
 }
 
+type PedidoConnectionDistribuidor {
+  connection: PedidoConnection
+  key: ID
+}
+
 type PedidoConnectionId {
   connection: PedidoConnection
   key: ID
@@ -243,11 +525,6 @@ type PedidoConnectionId_rastreo {
 type PedidoConnectionPublished_at {
   connection: PedidoConnection
   key: DateTime
-}
-
-type PedidoConnectionTienda {
-  connection: PedidoConnection
-  key: ID
 }
 
 type PedidoConnectionUpdatedAt {
@@ -266,29 +543,30 @@ type PedidoGroupBy {
   costoEnvio: [PedidoConnectionCostoEnvio]
   createdAt: [PedidoConnectionCreatedAt]
   direccionEntrega: [PedidoConnectionDireccionEntrega]
+  distribuidor: [PedidoConnectionDistribuidor]
   id: [PedidoConnectionId]
   id_rastreo: [PedidoConnectionId_rastreo]
   published_at: [PedidoConnectionPublished_at]
-  tienda: [PedidoConnectionTienda]
   updatedAt: [PedidoConnectionUpdatedAt]
 }
 
 type Product {
-  Custom_field: [ComponentCustomCustomField]
   _id: ID!
   cantidad: Int
-  categorias(limit: Int, sort: String, start: Int, where: JSON): [Category]
+  categorias(limit: Int, sort: String, start: Int, where: JSON): [Categoria]
   createdAt: DateTime!
   descripcion: String!
+  distribuidores(limit: Int, sort: String, start: Int, where: JSON): [Store]
   id: ID!
   imagen: UploadFile
   nombre: String!
   precio: Float
+  precioMayoreo: String
   precioVenta: Float
   productores(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
   slug: String
   status: ENUM_PRODUCT_STATUS!
-  tiendas(limit: Int, sort: String, start: Int, where: JSON): [Store]
+  subcategorias(limit: Int, sort: String, start: Int, where: JSON): [Category]
   updatedAt: DateTime!
 }
 
@@ -366,6 +644,11 @@ type ProductConnectionPrecio {
   key: Float
 }
 
+type ProductConnectionPrecioMayoreo {
+  connection: ProductConnection
+  key: String
+}
+
 type ProductConnectionPrecioVenta {
   connection: ProductConnection
   key: Float
@@ -400,34 +683,196 @@ type ProductGroupBy {
   imagen: [ProductConnectionImagen]
   nombre: [ProductConnectionNombre]
   precio: [ProductConnectionPrecio]
+  precioMayoreo: [ProductConnectionPrecioMayoreo]
   precioVenta: [ProductConnectionPrecioVenta]
   slug: [ProductConnectionSlug]
   status: [ProductConnectionStatus]
   updatedAt: [ProductConnectionUpdatedAt]
 }
 
+type Promocion {
+  _id: ID!
+  cantidadDescuento: Int
+  cantidadTotal: Int
+  createdAt: DateTime!
+  id: ID!
+  precioDescuento: Float
+  published_at: DateTime
+  updatedAt: DateTime!
+}
+
+type PromocionAggregator {
+  avg: PromocionAggregatorAvg
+  count: Int
+  max: PromocionAggregatorMax
+  min: PromocionAggregatorMin
+  sum: PromocionAggregatorSum
+  totalCount: Int
+}
+
+type PromocionAggregatorAvg {
+  cantidadDescuento: Float
+  cantidadTotal: Float
+  precioDescuento: Float
+}
+
+type PromocionAggregatorMax {
+  cantidadDescuento: Float
+  cantidadTotal: Float
+  precioDescuento: Float
+}
+
+type PromocionAggregatorMin {
+  cantidadDescuento: Float
+  cantidadTotal: Float
+  precioDescuento: Float
+}
+
+type PromocionAggregatorSum {
+  cantidadDescuento: Float
+  cantidadTotal: Float
+  precioDescuento: Float
+}
+
+type PromocionConnection {
+  aggregate: PromocionAggregator
+  groupBy: PromocionGroupBy
+  values: [Promocion]
+}
+
+type PromocionConnectionCantidadDescuento {
+  connection: PromocionConnection
+  key: Int
+}
+
+type PromocionConnectionCantidadTotal {
+  connection: PromocionConnection
+  key: Int
+}
+
+type PromocionConnectionCreatedAt {
+  connection: PromocionConnection
+  key: DateTime
+}
+
+type PromocionConnectionId {
+  connection: PromocionConnection
+  key: ID
+}
+
+type PromocionConnectionPrecioDescuento {
+  connection: PromocionConnection
+  key: Float
+}
+
+type PromocionConnectionPublished_at {
+  connection: PromocionConnection
+  key: DateTime
+}
+
+type PromocionConnectionUpdatedAt {
+  connection: PromocionConnection
+  key: DateTime
+}
+
+type PromocionConnection_id {
+  connection: PromocionConnection
+  key: ID
+}
+
+type PromocionGroupBy {
+  _id: [PromocionConnection_id]
+  cantidadDescuento: [PromocionConnectionCantidadDescuento]
+  cantidadTotal: [PromocionConnectionCantidadTotal]
+  createdAt: [PromocionConnectionCreatedAt]
+  id: [PromocionConnectionId]
+  precioDescuento: [PromocionConnectionPrecioDescuento]
+  published_at: [PromocionConnectionPublished_at]
+  updatedAt: [PromocionConnectionUpdatedAt]
+}
+
 type Query {
-  categories(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Category]
+  categoria(id: ID!, publicationState: PublicationState): Categoria
+  categorias(
+    limit: Int
+    publicationState: PublicationState
+    sort: String
+    start: Int
+    where: JSON
+  ): [Categoria]
+  categoriasConnection(limit: Int, sort: String, start: Int, where: JSON): CategoriaConnection
+  categories(
+    limit: Int
+    publicationState: PublicationState
+    sort: String
+    start: Int
+    where: JSON
+  ): [Category]
   categoriesConnection(limit: Int, sort: String, start: Int, where: JSON): CategoryConnection
   category(id: ID!, publicationState: PublicationState): Category
-  files(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UploadFile]
+  files(
+    limit: Int
+    publicationState: PublicationState
+    sort: String
+    start: Int
+    where: JSON
+  ): [UploadFile]
   filesConnection(limit: Int, sort: String, start: Int, where: JSON): UploadFileConnection
   me: UsersPermissionsMe
   pedido(id: ID!, publicationState: PublicationState): Pedido
-  pedidos(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Pedido]
+  pedidos(
+    limit: Int
+    publicationState: PublicationState
+    sort: String
+    start: Int
+    where: JSON
+  ): [Pedido]
   pedidosConnection(limit: Int, sort: String, start: Int, where: JSON): PedidoConnection
   product(id: ID!, publicationState: PublicationState): Product
-  products(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Product]
+  products(
+    limit: Int
+    publicationState: PublicationState
+    sort: String
+    start: Int
+    where: JSON
+  ): [Product]
   productsConnection(limit: Int, sort: String, start: Int, where: JSON): ProductConnection
+  promocion(id: ID!, publicationState: PublicationState): Promocion
+  promocions(
+    limit: Int
+    publicationState: PublicationState
+    sort: String
+    start: Int
+    where: JSON
+  ): [Promocion]
+  promocionsConnection(limit: Int, sort: String, start: Int, where: JSON): PromocionConnection
   role(id: ID!, publicationState: PublicationState): UsersPermissionsRole
   "Retrieve all the existing roles. You can't apply filters on this query."
-  roles(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UsersPermissionsRole]
+  roles(
+    limit: Int
+    publicationState: PublicationState
+    sort: String
+    start: Int
+    where: JSON
+  ): [UsersPermissionsRole]
   rolesConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsRoleConnection
   store(id: ID!, publicationState: PublicationState): Store
-  stores(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Store]
+  stores(
+    limit: Int
+    publicationState: PublicationState
+    sort: String
+    start: Int
+    where: JSON
+  ): [Store]
   storesConnection(limit: Int, sort: String, start: Int, where: JSON): StoreConnection
   user(id: ID!, publicationState: PublicationState): UsersPermissionsUser
-  users(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+  users(
+    limit: Int
+    publicationState: PublicationState
+    sort: String
+    start: Int
+    where: JSON
+  ): [UsersPermissionsUser]
   usersConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsUserConnection
 }
 
@@ -768,20 +1213,23 @@ type UsersPermissionsRoleGroupBy {
 }
 
 type UsersPermissionsUser {
+  RFC: String
   _id: ID!
   birthday: Date
   blocked: Boolean
+  company: String
   confirmed: Boolean
   createdAt: DateTime!
   deliveryDirection: [ComponentCustomDirection]
+  distribuidora: Store
   email: String!
   favoriteProducts(limit: Int, sort: String, start: Int, where: JSON): [Product]
   id: ID!
+  isMayorista: Boolean
   pedidos(limit: Int, sort: String, start: Int, where: JSON): [Pedido]
   products: Product
   provider: String
   role: UsersPermissionsRole
-  store: Store
   storyLife: String
   updatedAt: DateTime!
   username: String!
@@ -808,6 +1256,11 @@ type UsersPermissionsUserConnectionBlocked {
   key: Boolean
 }
 
+type UsersPermissionsUserConnectionCompany {
+  connection: UsersPermissionsUserConnection
+  key: String
+}
+
 type UsersPermissionsUserConnectionConfirmed {
   connection: UsersPermissionsUserConnection
   key: Boolean
@@ -816,6 +1269,11 @@ type UsersPermissionsUserConnectionConfirmed {
 type UsersPermissionsUserConnectionCreatedAt {
   connection: UsersPermissionsUserConnection
   key: DateTime
+}
+
+type UsersPermissionsUserConnectionDistribuidora {
+  connection: UsersPermissionsUserConnection
+  key: ID
 }
 
 type UsersPermissionsUserConnectionEmail {
@@ -828,6 +1286,11 @@ type UsersPermissionsUserConnectionId {
   key: ID
 }
 
+type UsersPermissionsUserConnectionIsMayorista {
+  connection: UsersPermissionsUserConnection
+  key: Boolean
+}
+
 type UsersPermissionsUserConnectionProducts {
   connection: UsersPermissionsUserConnection
   key: ID
@@ -838,12 +1301,12 @@ type UsersPermissionsUserConnectionProvider {
   key: String
 }
 
-type UsersPermissionsUserConnectionRole {
+type UsersPermissionsUserConnectionRFC {
   connection: UsersPermissionsUserConnection
-  key: ID
+  key: String
 }
 
-type UsersPermissionsUserConnectionStore {
+type UsersPermissionsUserConnectionRole {
   connection: UsersPermissionsUserConnection
   key: ID
 }
@@ -869,20 +1332,27 @@ type UsersPermissionsUserConnection_id {
 }
 
 type UsersPermissionsUserGroupBy {
+  RFC: [UsersPermissionsUserConnectionRFC]
   _id: [UsersPermissionsUserConnection_id]
   birthday: [UsersPermissionsUserConnectionBirthday]
   blocked: [UsersPermissionsUserConnectionBlocked]
+  company: [UsersPermissionsUserConnectionCompany]
   confirmed: [UsersPermissionsUserConnectionConfirmed]
   createdAt: [UsersPermissionsUserConnectionCreatedAt]
+  distribuidora: [UsersPermissionsUserConnectionDistribuidora]
   email: [UsersPermissionsUserConnectionEmail]
   id: [UsersPermissionsUserConnectionId]
+  isMayorista: [UsersPermissionsUserConnectionIsMayorista]
   products: [UsersPermissionsUserConnectionProducts]
   provider: [UsersPermissionsUserConnectionProvider]
   role: [UsersPermissionsUserConnectionRole]
-  store: [UsersPermissionsUserConnectionStore]
   storyLife: [UsersPermissionsUserConnectionStoryLife]
   updatedAt: [UsersPermissionsUserConnectionUpdatedAt]
   username: [UsersPermissionsUserConnectionUsername]
+}
+
+type createCategoriaPayload {
+  categoria: Categoria
 }
 
 type createCategoryPayload {
@@ -897,6 +1367,10 @@ type createProductPayload {
   product: Product
 }
 
+type createPromocionPayload {
+  promocion: Promocion
+}
+
 type createRolePayload {
   role: UsersPermissionsRole
 }
@@ -907,6 +1381,10 @@ type createStorePayload {
 
 type createUserPayload {
   user: UsersPermissionsUser
+}
+
+type deleteCategoriaPayload {
+  categoria: Categoria
 }
 
 type deleteCategoryPayload {
@@ -925,6 +1403,10 @@ type deleteProductPayload {
   product: Product
 }
 
+type deletePromocionPayload {
+  promocion: Promocion
+}
+
 type deleteRolePayload {
   role: UsersPermissionsRole
 }
@@ -937,6 +1419,10 @@ type deleteUserPayload {
   user: UsersPermissionsUser
 }
 
+type updateCategoriaPayload {
+  categoria: Categoria
+}
+
 type updateCategoryPayload {
   category: Category
 }
@@ -947,6 +1433,10 @@ type updatePedidoPayload {
 
 type updateProductPayload {
   product: Product
+}
+
+type updatePromocionPayload {
+  promocion: Promocion
 }
 
 type updateRolePayload {
@@ -981,6 +1471,15 @@ enum PublicationState {
   PREVIEW
 }
 
+input CategoriaInput {
+  created_by: ID
+  nombre: String
+  producto: ID
+  published_at: DateTime
+  slug: String
+  updated_by: ID
+}
+
 input CategoryInput {
   created_by: ID
   name: String
@@ -989,13 +1488,8 @@ input CategoryInput {
   updated_by: ID
 }
 
-input ComponentCustomCustomFieldInput {
-  options: String
-  required: Boolean
-  title: String
-}
-
 input ComponentCustomDirectionInput {
+  alias: String
   calle: String
   colonia: String
   estado: String
@@ -1013,17 +1507,23 @@ input ComponentCustomPhoneInput {
 }
 
 input ComponentCustomProductoPedidoInput {
-  Custom_field: [ComponentCustomCustomFieldInput]
   cantidad: Int
   categorias: [ID]
   descripcion: String
+  distribuidor: ID
   imagen: ID
   nombre: String
   precio: Float
   precioVenta: Float
   productores: [ID]
   status: ENUM_COMPONENTCUSTOMPRODUCTOPEDIDO_STATUS
-  tienda: ID
+  subcategorias: [ID]
+}
+
+input ComponentCustomPromocionInput {
+  cantidadDescuento: Int
+  cantidadTotal: Int
+  precioDescuento: Float
 }
 
 input FileInfoInput {
@@ -1068,27 +1568,37 @@ input PedidoInput {
   costoEnvio: Float
   created_by: ID
   direccionEntrega: ComponentCustomDirectionInput
+  distribuidor: ComponentCustomDirectionInput
   id_rastreo: String
   producto_pedido: [ComponentCustomProductoPedidoInput]
   published_at: DateTime
-  tienda: ComponentCustomDirectionInput
   updated_by: ID
 }
 
 input ProductInput {
-  Custom_field: [ComponentCustomCustomFieldInput]
   cantidad: Int
   categorias: [ID]
   created_by: ID
   descripcion: String!
+  distribuidores: [ID]
   imagen: ID
   nombre: String!
   precio: Float
+  precioMayoreo: String
   precioVenta: Float
   productores: [ID]
   slug: String
   status: ENUM_PRODUCT_STATUS
-  tiendas: [ID]
+  subcategorias: [ID]
+  updated_by: ID
+}
+
+input PromocionInput {
+  cantidadDescuento: Int
+  cantidadTotal: Int
+  created_by: ID
+  precioDescuento: Float
+  published_at: DateTime
   updated_by: ID
 }
 
@@ -1113,21 +1623,24 @@ input StoreInput {
 }
 
 input UserInput {
+  RFC: String
   birthday: Date
   blocked: Boolean
+  company: String
   confirmationToken: String
   confirmed: Boolean
   created_by: ID
   deliveryDirection: [ComponentCustomDirectionInput]
+  distribuidora: ID
   email: String!
   favoriteProducts: [ID]
+  isMayorista: Boolean
   password: String
   pedidos: [ID]
   products: ID
   provider: String
   resetPasswordToken: String
   role: ID
-  store: ID
   storyLife: String
   updated_by: ID
   username: String!
@@ -1145,6 +1658,10 @@ input UsersPermissionsRegisterInput {
   username: String!
 }
 
+input createCategoriaInput {
+  data: CategoriaInput
+}
+
 input createCategoryInput {
   data: CategoryInput
 }
@@ -1157,6 +1674,10 @@ input createProductInput {
   data: ProductInput
 }
 
+input createPromocionInput {
+  data: PromocionInput
+}
+
 input createRoleInput {
   data: RoleInput
 }
@@ -1167,6 +1688,10 @@ input createStoreInput {
 
 input createUserInput {
   data: UserInput
+}
+
+input deleteCategoriaInput {
+  where: InputID
 }
 
 input deleteCategoryInput {
@@ -1185,6 +1710,10 @@ input deleteProductInput {
   where: InputID
 }
 
+input deletePromocionInput {
+  where: InputID
+}
+
 input deleteRoleInput {
   where: InputID
 }
@@ -1197,6 +1726,15 @@ input deleteUserInput {
   where: InputID
 }
 
+input editCategoriaInput {
+  created_by: ID
+  nombre: String
+  producto: ID
+  published_at: DateTime
+  slug: String
+  updated_by: ID
+}
+
 input editCategoryInput {
   created_by: ID
   name: String
@@ -1205,14 +1743,8 @@ input editCategoryInput {
   updated_by: ID
 }
 
-input editComponentCustomCustomFieldInput {
-  id: ID
-  options: String
-  required: Boolean
-  title: String
-}
-
 input editComponentCustomDirectionInput {
+  alias: String
   calle: String
   colonia: String
   estado: String
@@ -1232,10 +1764,10 @@ input editComponentCustomPhoneInput {
 }
 
 input editComponentCustomProductoPedidoInput {
-  Custom_field: [editComponentCustomCustomFieldInput]
   cantidad: Int
   categorias: [ID]
   descripcion: String
+  distribuidor: ID
   id: ID
   imagen: ID
   nombre: String
@@ -1243,7 +1775,14 @@ input editComponentCustomProductoPedidoInput {
   precioVenta: Float
   productores: [ID]
   status: ENUM_COMPONENTCUSTOMPRODUCTOPEDIDO_STATUS
-  tienda: ID
+  subcategorias: [ID]
+}
+
+input editComponentCustomPromocionInput {
+  cantidadDescuento: Int
+  cantidadTotal: Int
+  id: ID
+  precioDescuento: Float
 }
 
 input editFileInput {
@@ -1278,27 +1817,37 @@ input editPedidoInput {
   costoEnvio: Float
   created_by: ID
   direccionEntrega: editComponentCustomDirectionInput
+  distribuidor: editComponentCustomDirectionInput
   id_rastreo: String
   producto_pedido: [editComponentCustomProductoPedidoInput]
   published_at: DateTime
-  tienda: editComponentCustomDirectionInput
   updated_by: ID
 }
 
 input editProductInput {
-  Custom_field: [editComponentCustomCustomFieldInput]
   cantidad: Int
   categorias: [ID]
   created_by: ID
   descripcion: String
+  distribuidores: [ID]
   imagen: ID
   nombre: String
   precio: Float
+  precioMayoreo: String
   precioVenta: Float
   productores: [ID]
   slug: String
   status: ENUM_PRODUCT_STATUS
-  tiendas: [ID]
+  subcategorias: [ID]
+  updated_by: ID
+}
+
+input editPromocionInput {
+  cantidadDescuento: Int
+  cantidadTotal: Int
+  created_by: ID
+  precioDescuento: Float
+  published_at: DateTime
   updated_by: ID
 }
 
@@ -1323,24 +1872,32 @@ input editStoreInput {
 }
 
 input editUserInput {
+  RFC: String
   birthday: Date
   blocked: Boolean
+  company: String
   confirmationToken: String
   confirmed: Boolean
   created_by: ID
   deliveryDirection: [editComponentCustomDirectionInput]
+  distribuidora: ID
   email: String
   favoriteProducts: [ID]
+  isMayorista: Boolean
   password: String
   pedidos: [ID]
   products: ID
   provider: String
   resetPasswordToken: String
   role: ID
-  store: ID
   storyLife: String
   updated_by: ID
   username: String
+}
+
+input updateCategoriaInput {
+  data: editCategoriaInput
+  where: InputID
 }
 
 input updateCategoryInput {
@@ -1358,6 +1915,11 @@ input updateProductInput {
   where: InputID
 }
 
+input updatePromocionInput {
+  data: editPromocionInput
+  where: InputID
+}
+
 input updateRoleInput {
   data: editRoleInput
   where: InputID
@@ -1372,7 +1934,6 @@ input updateUserInput {
   data: editUserInput
   where: InputID
 }
-
 
 "The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
 scalar JSON

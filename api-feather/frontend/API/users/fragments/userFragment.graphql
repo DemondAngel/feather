@@ -1,9 +1,0 @@
-fragment userInfo on UsersPermissionsMe {
-  id
-  role{
-    name
-  }
-  username
-  email
-  confirmed
-}

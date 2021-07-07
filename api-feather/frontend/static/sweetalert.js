@@ -11,6 +11,14 @@ export const SwalLoading = (title = 'Espere por favor...') => {
   sweet.showLoading()
 }
 
+export const SwalSuccess = (title, text) => {
+  sweet.fire({
+    title,
+    html: text,
+    icon: 'success',
+  })
+}
+
 export const SwalConfirm = (question, text, confirmButtonText) => {
   return sweet.fire({
     title: question,

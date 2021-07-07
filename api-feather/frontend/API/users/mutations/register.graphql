@@ -1,8 +1,0 @@
-# import "../fragments/userFragment.graphql"
-
-mutation ($email: String!, $password: String!, $username: String!) {
-  register(input: { email: $email, password: $password, username: $username }) {
-    jwt
-    ...userInfo
-  }
-}
