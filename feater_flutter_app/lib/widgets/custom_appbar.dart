@@ -79,3 +79,20 @@ AppBar customAppBarSearch({required BuildContext context, required bool showRetu
     ],
   );
 }
+
+AppBar customAppBarModule({required BuildContext context, required bool showReturnButton, VoidCallback? returnButtonAction, required title}){
+  final leadingButton = TextButton(
+    onPressed: returnButtonAction ?? () => Navigator.of(context).pop(),
+    child: SvgPicture.asset(backButtonIcon),
+  );
+
+  return AppBar(
+    backgroundColor: Theme.of(context).primaryColor,
+    elevation: 0.0,
+    toolbarHeight: 60,
+    title: Text(title,
+      style: Theme.of(context).textTheme.headline6
+    ),
+    leading: leadingButton,
+  );
+}

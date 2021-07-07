@@ -15,7 +15,7 @@
     "id_rastreo": {
       "type": "string"
     },
-    "tienda": {
+    "distribuidor": {
       "type": "component",
       "repeatable": false,
       "component": "custom.direction"

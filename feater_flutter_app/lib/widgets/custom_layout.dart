@@ -41,7 +41,12 @@ class _CustomLayoutState extends State<CustomLayout>{
               context: context,
               showReturnButton: this.widget.showReturnButton,
               returnButtonAction: this.widget.returnButtonAction,
-          ):null,
+          ):customAppBarModule(
+            title: 'Obio',
+              context: context,
+              showReturnButton: this.widget.showReturnButton,
+              returnButtonAction: this.widget.returnButtonAction
+          ),
           body: Container(
             width: double.infinity,
             height: double.infinity,

@@ -28,13 +28,8 @@
       "required": false,
       "pluginOptions": {}
     },
-    "categorias": {
+    "subcategorias": {
       "collection": "category"
-    },
-    "Custom_field": {
-      "type": "component",
-      "repeatable": true,
-      "component": "custom.custom-field"
     },
     "status": {
       "type": "enumeration",
@@ -53,8 +48,11 @@
       "plugin": "users-permissions",
       "collection": "user"
     },
-    "tienda": {
+    "distribuidor": {
       "model": "store"
+    },
+    "categorias": {
+      "collection": "categoria"
     }
   }
 }
