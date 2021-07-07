@@ -4,7 +4,9 @@
 @import './utils/variables';
 @import '~bootstrap';
 @import './utils/color_merge';
+@import './utils/variables_var';
 
 @import './components/button';
 @import './components/alert';
 @import './components/background';
+@import './components/display';
