@@ -5,7 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 enum AppBarType{
   TRANSPARENT,
   MODULE,
-  SEARCH
+  SEARCH,
+  SHOP
 }
 
 
@@ -93,6 +94,33 @@ AppBar customAppBarModule({required BuildContext context, required bool showRetu
     title: Text(title,
       style: Theme.of(context).textTheme.headline6
     ),
+    leading: leadingButton,
+  );
+}
+
+AppBar customAppBarShop({required BuildContext context, required bool showReturnButton, VoidCallback? returnButtonAction, required title}){
+  final leadingButton = TextButton(
+    onPressed: returnButtonAction ?? () => Navigator.of(context).pop(),
+    child: SvgPicture.asset(backButtonIcon),
+  );
+
+  return AppBar(
+    backgroundColor: Theme.of(context).primaryColor,
+    elevation: 0.0,
+    toolbarHeight: 60,
+    title: Text(title,
+        style: Theme.of(context).textTheme.headline6
+    ),
+    actions: [
+      TextButton(
+        onPressed: () => Navigator.of(context).pushNamed('/cart'),
+        child: Icon(
+            Icons.shopping_cart,
+          color: Colors.white,
+          size: 28,
+        ),
+      )
+    ],
     leading: leadingButton,
   );
 }

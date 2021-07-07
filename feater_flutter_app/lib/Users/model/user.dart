@@ -28,7 +28,8 @@ class User{
         password: json['password'] ?? '',
         confirmed: json['confirmed'] ?? false,
         blocked: json['blocked'] ?? true,
-        role: Role.fromJson(json['role'] ?? {})
+        role: Role.fromJson(json['role'] ?? {}),
+      storyLife: json['storyLife'] ?? ''
     );
   }
 

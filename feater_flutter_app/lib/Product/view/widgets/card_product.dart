@@ -1,4 +1,4 @@
-import 'package:feater_flutter_app/Product/model/producto.dart';
+import 'package:feater_flutter_app/Product/model/product.dart';
 import 'package:feater_flutter_app/utils/config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
