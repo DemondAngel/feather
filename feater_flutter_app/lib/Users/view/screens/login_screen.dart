@@ -94,7 +94,6 @@ class _LoginStateScreen extends State<LoginScreen>{
                         height: 250,
                         child: Image.asset(logo)
                     ),
-
                     Form(
                       child: Builder(
                           builder: (BuildContext context) => Column(

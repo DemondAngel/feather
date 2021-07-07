@@ -1,3 +1,4 @@
+import 'package:feater_flutter_app/Delivery/bloc/delivery_bloc.dart';
 import 'package:feater_flutter_app/Users/bloc/user_bloc.dart';
 import 'package:feater_flutter_app/utils/routing.dart';
 import 'package:feater_flutter_app/widgets/custom_theme.dart';
@@ -16,12 +17,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       bloc: UserBloc(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        routes: routes,
-        theme: customTheme(),
-        initialRoute: '/',
-      ),
+      child: BlocProvider(
+        bloc: DeliveryBloc(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          routes: routes,
+          theme: customTheme(),
+          initialRoute: '/',
+        ),
+      )
     );
   }
 }

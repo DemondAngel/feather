@@ -9,6 +9,7 @@ class Product{
   dynamic image;
   String? slug;
   List<dynamic>? subcategory;
+  List<dynamic>? category;
   dynamic status;
   int? priceSell;
   int? quantity;
@@ -16,7 +17,7 @@ class Product{
   List<User>? productors;
 
   Product({this.id, this.name, this.description, this.price, this.image, this.slug, this.subcategory, this.status, this.priceSell,
-    this.quantity, this.priceMajor, this.productors});
+    this.quantity, this.priceMajor, this.productors, this.category});
 
   factory Product.fromJson(Map<String, dynamic> json){
     return Product(
@@ -27,13 +28,15 @@ class Product{
       image: json['imagen'] ?? null,
       slug: json['slug'] ?? '',
       subcategory:  json['subcategorias'],
+      category: json['categorias'] ?? null,
       productors: json['productores'] != null ?
       List<User>.generate(json['productores'].length, (index) => User.fromJson(json['productores'][index]))
           : [],
       status: json['status'] ?? null,
       priceSell: json['precioVenta'] ?? 0,
       priceMajor: json['precioMayoreo'] ?? '',
-      quantity: json['cantidad'] ?? 0
+      quantity: json['cantidad'] ?? 0,
+
     );
   }
 

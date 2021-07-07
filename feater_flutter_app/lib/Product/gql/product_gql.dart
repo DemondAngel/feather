@@ -28,7 +28,6 @@ class ProductGQl extends BaseGQL{
           email,
           storyLife,
           username,
-          
         },
         distribuidores{
           alias
