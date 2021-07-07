@@ -1295,6 +1295,9 @@
                 },
                 "colonia": {
                   "type": "string"
+                },
+                "alias": {
+                  "type": "string"
                 }
               }
             }
@@ -1619,6 +1622,9 @@
                   "type": "number"
                 },
                 "colonia": {
+                  "type": "string"
+                },
+                "alias": {
                   "type": "string"
                 }
               }

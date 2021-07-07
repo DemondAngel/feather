@@ -1,3 +1,4 @@
 const config = {
-  'url': 'http://165.227.199.69:1313/graphql'
+  'url': 'http://35.226.240.143/graphql',
+  'urlImage': 'http://35.226.240.143'
 };
