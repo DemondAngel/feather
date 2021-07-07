@@ -46,7 +46,7 @@ export default {
     ...mapGetters({ isLogged: 'isLogged' }),
     getUrlImage() {
       return this.product.imagen?.url
-        ? `http://35.226.240.143${this.product.imagen.url}`
+        ? `localhost:8080${this.product.imagen.url}`
         : 'https://cdn.pixabay.com/photo/2016/04/12/22/35/watercolour-1325656__480.jpg'
     },
   },

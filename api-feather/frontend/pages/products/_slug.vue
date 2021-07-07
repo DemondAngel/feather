@@ -22,7 +22,7 @@
     <div class="mt-4">
       <div class="fw-bold fs-3">Imágenes</div>
       <template v-if="product.imagen">
-        <img :src="`http://35.226.240.143${this.product.imagen.url}`" :alt="product.nombre" />
+        <img :src="`localhost:8080${this.product.imagen.url}`" :alt="product.nombre" />
       </template>
       <div class="alert alert-secondary mt-2" role="alert" v-else>
         Este producto no tiene imagenes por el momento
